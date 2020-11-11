@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Group 7 - Diabetes Associaton App</title>
+
+    <link href="../assets/css/dda_styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="row">
+                <li class="selected" id="navBtn1">
+                    <button class="navButtons" id="btnHome">
+                        <i class="fas fa-home"></i>
+                       Home
+                    </button>
+                </li>
+                <li id="navBtn2">
+                    <button class="navButtons" id="btnRecipes">
+                        <i class="fas fa-book-open"></i>
+                        Recipes
+                    </button>
+                </li>
+                <li class="circle" id="navBtnCircle">
+                    <button class="navButtons" id="btnDiary">
+                        <i class="fas fa-marker"></i>
+                        Diary
+                    </button>
+                </li>
+                <li id="navBtn3">
+                    <button class="navButtons" id="btnShoppingList">
+                        <i class="fas fa-list-ul"></i>
+                        Shopping&nbsp;list
+                    </button>
+                </li>
+                <li id="navBtn4">
+                    <button class="navButtons" id="btnProfile">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ----------- HOME - NUTRIENT CARD
+------------------------------------------------ -->
+        <div class="nutrition-info in-view" id="Home">
+            <nav>
+                <ul class="card-guide">
+                    <li class="selected" id="btnNutrientCard">
+                        <button>Nutrient card</button>
+                    </li>
+                    <li id="btnNutrientGuide">
+                        <button>Nutrient guide</button>
+                    </li>
+                </ul>
+            </nav>
+            <section class="nutrient-card in-view" id="nutrientCard">
+                <article>
+                    <div class="home-text">
+                        <h1>Hello,</h1>
+                        <p>Here you can check the recommended amounts of sugar, fat and fibre in selected food
+                            groups.
+                        </p>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nutrients per 100g / 100ml</th>
+                                <th>Sugar</th>
+                                <th>Fat</th>
+                                <th>Fibre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fruit juice (per ml.)</td>
+                                <td>2g</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Soft drinks (per ml.)</td>
+                                <td>1g</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Cacao / Milk drinks (per ml.)</td>
+                                <td>6g</td>
+                                <td>0.7g</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Rye / Crisp bread</td>
+                                <td>5g</td>
+                                <td>7g</td>
+                                <td>8g</td>
+                            </tr>
+                            <tr>
+                                <td>Rye / Crisp bread</td>
+                                <td>5g</td>
+                                <td>7g</td>
+                                <td>5g</td>
+                            </tr>
+                            <tr>
+                                <td>Breakfast products</td>
+                                <td>13g</td>
+                                <td>8g</td>
+                                <td>8g</td>
+                            </tr>
+                            <tr>
+                                <td>Milk products</td>
+                                <td>-</td>
+                                <td>0.7g</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Sour dairy products</td>
+                                <td>6g</td>
+                                <td>1.5g</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan=2>Sweeteners that do not increase blood sugar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Name</b></td>
+                                <td><b>Number</b></td>
+                            </tr>
+                            <tr>
+                                <td>Aspartame</td>
+                                <td>E 951</td>
+                            </tr>
+                            <tr>
+                                <td>Cyclamate</td>
+                                <td>E 952</td>
+                            </tr>
+                            <tr>
+                                <td>Thaumatin</td>
+                                <td>E 957</td>
+                            </tr>
+                            <tr>
+                                <td>Acesulfame K</td>
+                                <td>E 950</td>
+                            </tr>
+                            <tr>
+                                <td>Neohesperidine</td>
+                                <td>E 959</td>
+                            </tr>
+                            <tr>
+                                <td>Saccharine</td>
+                                <td>E 954</td>
+                            </tr>
+                            <tr>
+                                <td>Sucralose</td>
+                                <td>E 955</td>
+                            </tr>
+                            <tr>
+                                <td>Eythritol</td>
+                                <td>E 968</td>
+                            </tr>
+                            <tr>
+                                <td>Steviol glycoside</td>
+                                <td>E 960</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <!-- -------------- NUTRIENT GUIDE 
+            -------------------------------------------------- -->
+            <section class="nutrient-guide hide" id="nutrientGuide">
+                <article class="brands">
+                    <h4>Products with these brands contain:</h4>
+                    <div class="row brand">
+                        <div class="keyhole img"></div>
+                        <p>Less fat, sugar and salt. <br> More dietary fibre and wholegrains.</p>
+                    </div>
+                    <div class="row brand">
+                        <div class="wholegrain img"></div>
+                        <p>Less fat, sugar and salt. <br> Lots of wholegrains and more dietary fibre</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <p class="guide-text">The displayed amounts are the <span>highest</span> recommended amounts per
+                            product
+                            category.</p>
+                    </div>
+
+                    <article class="row">
+                        <div class="juice img"></div>
+                        <p>Fruit juices - 10g of sugar per 100ml</p>
+                    </article>
+                    <article class="row">
+                        <div class="soft-drinks img"></div>
+                        <p>Soft drinks - 1g of sugar per 100ml</p>
+                    </article>
+                    <article class="row">
+                        <div class="cacao-milk img"></div>
+                        <p>Cacao and milk drinks - 0,7% fat, 4% added sugars or 8g of sugar per 100ml</p>
+                    </article>
+                    <article class="row">
+                        <div class="rye-crisp img"></div>
+                        <p>Rye / Crisp bread - 7g fat, 5g of sugar and at least 6g of fibre</p>
+                    </article>
+                    <article class="row">
+                        <div class="whole-wheat img"></div>
+                        <p>Whole wheat bread - 7g fat, 5g of sugar and at least 5g of fibre</p>
+                    </article>
+                    <article class="row">
+                        <div class="breakfast img"></div>
+                        <p>Breakfast products - 8g fat, 13g of sugar and at least 6g of fibre</p>
+                    </article>
+                    <article class="row">
+                        <div class="milk img"></div>
+                        <p>Milk products - 0.7% fat</p>
+                    </article>
+                    <article class="row">
+                        <div class="sour img"></div>
+                        <p>Sour dairy products - 1,5% fat, 4% added sugars or 8g of sugar per 100g</p>
+                    </article>
+                    <article class="row">
+                        <div class="cheese img"></div>
+                        <p>Cheese - 17% fat (30+)</p>
+                    </article>
+                    <article class="row">
+                        <div class="meat img"></div>
+                        <p>Meat and plant-based meat products – 10% fat</p>
+                    </article>
+                    <article class="row">
+                        <div class="palaeg img"></div>
+                        <p>Palaeg – 10% fat</p>
+                    </article>
+                    <article class="row">
+                        <div class="fish img"></div>
+                        <p>Fish and seafood - Go for: fresh, frozen or canned fish</p>
+                    </article>
+                    <article class="row">
+                        <div class="veg-fruit img"></div>
+                        <p>Vegetables and fruit – Go for: fresh, frozen or canned without added sugar</p>
+                    </article>
+                    <article class="row">
+                        <div class="potatoes img"></div>
+                        <p>Potatoes and potato products - 3% of fat per 100g</p>
+                    </article>
+                    <article class="row">
+                        <div class="snacks img"></div>
+                        <p>Snacks – 5g of fat preferably with vegetables and whole grains</p>
+                    </article>
+                    <article class="row">
+                        <div class="ready img"></div>
+                        <p>Ready meals – 5g of fat preferably with vegetables and whole grains</p>
+                    </article>
+                    <article class="row">
+                        <div class="dressings img"></div>
+                        <p>Dressings and sauces – 5g of fat</p>
+                    </article>
+                </article>
+            </section>
+        </div>
+
+        <!-- ----------- SHOPPING LIST
+            --------------------------------------------------- -->
+        <div class="shopping-list" id="ShoppingList">
+            <section>
+                <article>
+                    <h3>Ooops! Looks like your shopping list is empty. Start adding ingredients:</h3>
+                    <div class="ingredient-list"></div>
+                </article>
+            </section>
+        </div>
+
+        <!-- ----------- DIARY
+            --------------------------------------------------- -->
+        <div class="diary" id="Diary">
+            <section>
+                <article>
+                    <h3>Track your nutrients and mood</h3>
+                    <br>
+                    <h4>What's your mood today?</h4>
+                    <div class="emojis row">
+                        <i class="fas fa-smile-beam"></i>
+                        <i class="fas fa-laugh-beam"></i>
+                        <i class="fas fa-grin-tongue-squint"></i>
+                        <i class="fas fa-meh-rolling-eyes"></i>
+                        <i class="fas fa-sad-tear"></i>
+                        <i class="fas fa-angry"></i>
+                    </div>
+                    <br>
+                    <h4>Your nutrients:</h4>
+                    <div class="ingredient-list"></div>
+                </article>
+            </section>
+        </div>
+
+
+        <!-- ----------- RECIPE FILTERS
+            --------------------------------------------------- -->
+        <div class="recipesFilters" id="jsRecipeFilters">
+            <section>
+                <article>
+                    <div class="row">
+                        <h3>Choose a meal type or an ingredient</h3>
+                        <i class="fas fa-times" id="closeFilters"></i>
+                    </div>
+
+                    <br>
+                    <h4>Meal Type</h4>
+                    <br>
+                    <ul>
+                        <li>
+                            <label class="checkboxContainer" for="meal1"> Breakfast
+                                <input type="checkbox" id="meal1" name="meal1" value="Breakfast">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="meal2"> Lunch
+                                <input type="checkbox" id="meal2" name="meal2" value="Lunch">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="meal3"> Dinner
+                                <input type="checkbox" id="meal3" name="meal3" value="Dinner">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="meal4"> Desserts and cakes
+                                <input type="checkbox" id="meal4" name="meal4" value="Desserts and cakes">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <br>
+                    <h4>Ingredient</h4>
+                    <br>
+                    <ul>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient1"> Chicken
+                                <input type="checkbox" id="ingredient1" name="ingredient1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient2"> Pork
+                                <input type="checkbox" id="ingredient2" name="ingredient2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient3"> Beef
+                                <input type="checkbox" id="ingredient3" name="ingredient3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient4"> Potato
+                                <input type="checkbox" id="ingredient4" name="ingredient4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient5"> Carrot
+                                <input type="checkbox" id="ingredient5" name="ingredient5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient6"> Pepper
+                                <input type="checkbox" id="ingredient6" name="ingredient6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient7">Leguminous plants
+                                <input type="checkbox" id="ingredient7" name="ingredient7">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient8">Rice
+                                <input type="checkbox" id="ingredient8" name="ingredient8">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient9">Pasta
+                                <input type="checkbox" id="ingredient9" name="ingredient9">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient10">Dairy
+                                <input type="checkbox" id="ingredient10" name="ingredient10">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient11">Chocolate
+                                <input type="checkbox" id="ingredient11" name="ingredient11">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li><hr></li>
+                        <li>
+                            <label class="checkboxContainer" for="ingredient12">Cocoa
+                                <input type="checkbox" id="ingredient12" name="ingredient12">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <button class="btnFilters">Cancel</button>
+                        <button class="btnFilters">Apply Filters</button>
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+
+        <!-- --------------------- RECIPE LIST
+        --------------------------------------------------------------- -->
+        <div class="recipesCards" id="Recipes">
+            <section>
+                <div class="row">
+                    <h3>Recipes</h3>
+                    <button class="filters" id="jsFilters">
+                        <i class="fas fa-filter"></i> <b>Filter</b></button>
+                </div>
+                <article>
+                    <p>Bring variety to your daily meals with our recipes</p>
+                </article>
+                <article class="row" id="jsExamplaryRecipe">
+                    <div class="pancakes-oats img"></div>
+                    <div class="recipeDescription">
+                        <h4>Pancakes with oats</h4>
+                        <p>Breakfast</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="golden-porridge img"></div>
+                    <div class="recipeDescription">
+                        <h4>Golden toasted porridge</h4>
+                        <p>Breakfast</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="rice-pudding img"></div>
+                    <div class="recipeDescription">
+                        <h4>Overnight rice pudding</h4>
+                        <p>Muesli with dried fruit</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="beer-porridge img"></div>
+                    <div class="recipeDescription">
+                        <h4>Beer porridge</h4>
+                        <p>Breakfast</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="lunchbox img"></div>
+                    <div class="recipeDescription">
+                        <h4>Lunchbox</h4>
+                        <p>Lunch</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="wraps img"></div>
+                    <div class="recipeDescription">
+                        <h4>Green wraps</h4>
+                        <p>Lunch</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="potatoes-cheese img"></div>
+                    <div class="recipeDescription">
+                        <h4>Potatoes with smoked cheese</h4>
+                        <p>Lunch</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="carrots-pesto img"></div>
+                    <div class="recipeDescription">
+                        <h4>Baked carrots with almond pesto</h4>
+                        <p>Lunch</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="bulgur img"></div>
+                    <div class="recipeDescription">
+                        <h4>Bulgur salad with root vegetables and chicken</h4>
+                        <p>Lunch</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="pork-chops img"></div>
+                    <div class="recipeDescription">
+                        <h4>Stuffed pork chops</h4>
+                        <p>Dinner</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="fish-salad img"></div>
+                    <div class="recipeDescription">
+                        <h4>Fish salad</h4>
+                        <p>Dinner</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="sushi img"></div>
+                    <div class="recipeDescription">
+                        <h4>Sushi with tiger pawns</h4>
+                        <p>Dinner</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="veg-packs img"></div>
+                    <div class="recipeDescription">
+                        <h4>Vegetable packets</h4>
+                        <p>Dinner</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="lentil-soup img"></div>
+                    <div class="recipeDescription">
+                        <h4>Golden lentil soup</h4>
+                        <p>Dinner</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="balls img"></div>
+                    <div class="recipeDescription">
+                        <h4>Snack balls</h4>
+                        <p>Snacks</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="panes img"></div>
+                    <div class="recipeDescription">
+                        <h4>Muesli panes</h4>
+                        <p>Snacks</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="rye-pancakes img"></div>
+                    <div class="recipeDescription">
+                        <h4>Rye bread pancakes</h4>
+                        <p>Snacks, desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="rye-chips img"></div>
+                    <div class="recipeDescription">
+                        <h4>Rye bread chips</h4>
+                        <p>Snacks</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="rolls img"></div>
+                    <div class="recipeDescription">
+                        <h4>Raisin rolls</h4>
+                        <p>Snacks</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="brownies img"></div>
+                    <div class="recipeDescription">
+                        <h4>Brownies with cauliflower</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="choc-orange img"></div>
+                    <div class="recipeDescription">
+                        <h4>Chocolate cake with orange</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="apricot-lemon img"></div>
+                    <div class="recipeDescription">
+                        <h4>Bread rolls with apricot and lemon cream</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="glutenfree img"></div>
+                    <div class="recipeDescription">
+                        <h4>Gluten free carrot cake</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="american-cookies img"></div>
+                    <div class="recipeDescription">
+                        <h4>Oatmeal cookies - american style</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="carrot-cake img"></div>
+                    <div class="recipeDescription">
+                        <h4>Carrot cake</h4>
+                        <p>Desserts</p>
+                        <div><i class="fas fa-bookmark"></i></div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- -------------------------- EXAMPLARY RECIPE
+        --------------------------------------------------------- -->
+        <div class="recipe-example" id="recipeExample">
+            <section>
+                <article>
+                    <i class="fas fa-arrow-left" id="closeExamplaryRecipe"></i>
+                    <div class="pancakes-oats image"></div>
+                    <div class="pancake-recipe">
+
+                        <h3>Pancakes with oats</h3>
+
+                        <h4>Ingredients:</h4><br>
+
+                        <p>
+                            - 2½ dl milk with a maximum of 0.7% fat <br>
+                            - ½ hp. yeast (25 g) <br>
+                            - 1 egg <br>
+                            - 1 tbsp. fat <br>
+                            - 1 tsp. sugar <br>
+                            - 1 tsp. salt <br>
+                            - 250 g whole wheat flour <br>
+                            - 250 g flour (approx. 4 dl) <br>
+                        </p>
+                        <br>
+                        <h4>For cooking</h4>
+                        <p>
+                            - 1 l sell <br>
+                            - 2 tsp. salt <br>
+                        </p>
+                        <br>
+                        <h4>Brushing</h4>
+                        <p>- 1 egg<br></p>
+                        <br>
+                        <h4>Preparation</h4><br>
+                        <p>
+                            Soak the oatmeal in the milk for approx. 15 min. Whisk flour, eggs, sugar, baking soda,
+                            cardamom and salt in. Add the fat and whisk the dough completely. <br>
+                            Distribute barely ½ dl of dough on a frying pan and cook for 2-3 minutes. Turn over the
+                            pancake and fry on the other side.<br>
+
+                            If the frying pan has Teflon coating, no extra fat is needed. Bake a total of 14 small
+                            pancakes.<br>
+                        </p>
+                        <br>
+                        <h4>Serving</h4><br>
+                        <p>Serve brunch pancakes with oats for brunch or for a snack.<br></p>
+                        <br>
+                        <h4>Alternative</h4><br>
+                        <p>
+                            Brunch pancakes with blueberries 100 g of blueberries, preferably frozen, are turned into
+                            the dough before baking the pancakes.<br>
+                            1 cup of milk can be replaced by 1 cup of light pilsner.<br>
+                        </p>
+
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- ---------- PROFILE
+        -------------------------------------------------- -->
+        <div class="profile" id="Profile">
+            <section>
+                <article class="row">
+                    <div class="user-avatar"></div>
+                    <div class="button-container">
+                        <h4>Jonathan J</h4>
+                        <p>jonathanj@mail.com</p>
+                        <button id="btnEditProfile">Edit profile</button>
+                    </div>
+                </article>
+
+                <div class="options">
+
+                    <ul>
+                        <li class="row"><i class="fas fa-bookmark"></i>
+                            <h4>My Recipes</h4>
+                        </li>
+                        <li><hr></li>
+                        <li class="row"><i class="fas fa-marker"></i>
+                            <h4>My Diary</h4>
+                        </li>
+                        <li><hr></li>
+                        <li class="row"><i class="fas fa-sign-out-alt"></i>
+                            <h4>
+                                Log Out</h4>
+                        </li>
+                        <li><hr></li>
+                    </ul>
+                </div>
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ---------------------- INFO
+    ----------------------------------------- -->
+
+    <aside>
+        <nav>
+            <ul class="row">
+                <li>
+                    <button class="logo"></button>
+                </li>
+                <li>
+                    <button id="btnInfo">
+                        <i class="fas fa-info"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- -------------------- FOOTER 
+        ----------------------------- -->
+
+    <footer id="Info">
+        <button class="fas fa-times" id="btnCloseInfo"></button>
+        <article>
+            <div>
+                <div class="logo_big"></div>
+                <p>Contact us: </p>
+                <p>Number: </p>
+                <a href="tel:+4566129006">+45 66 12 90 06</a>
+                <p>Mail: </p>
+                <a href="mailto:info@diabetes.dk">info@diabetes.dk</a>
+                <p>Or visit our website to learn more:</p>
+                <a href="https://diabetes.dk/">https://diabetes.dk/</a>
+            </div>
+        </article>
+    </footer>
+
+    <script src="../assets/js/dda_script.js" defer async></script>
+    <script src="https://kit.fontawesome.com/2e513787a6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

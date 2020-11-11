@@ -1,0 +1,709 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Lato';
+}
+
+:root {
+    --red: #BA0816;
+    --white: #FFFFFF;
+    --background: #F7F7F7;
+    --darkgrey: #707070;
+    --black: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+header,
+main,
+aside,
+footer,
+nav {
+    width: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.hide {
+    position: relative;
+    display: none;
+    top: 0;
+    z-index: 1;
+}
+
+.in-view {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main nav {
+    position: fixed;
+    top: 14vw;
+    background-color: var(--white);
+    z-index: 2;
+}
+
+@media (max-width:430px) {
+
+    /* TOP NAVIGATION */
+    aside {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    aside nav {
+        background-color: var(--red);
+    }
+
+    aside ul,
+    aside li {
+        width: 100%;
+    }
+
+    aside .logo {
+        background-color: transparent;
+        border: none;
+        background-image: url(../images/logo_small.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 7vw 25vw;
+        position: relative;
+        left: 50%;
+    }
+
+    #btnInfo {
+        background-color: var(--red);
+        color: var(--white);
+        border: white 3px solid;
+        border-radius: 50%;
+        width: 9vw;
+        height: 9vw;
+        font-size: 18px;
+        position: relative;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* -------------------- BOTTOM NAVIGATION ----------------- */
+    header {
+        position: fixed;
+        top: 100%;
+        transform: translateY(-80%);
+        z-index: 10;
+    }
+
+    header nav {
+        border-top: var(--red) 1px solid;
+        background-color: var(--white);
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    header nav li {
+        padding: 2vw 1vw;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        border-top: 3px solid transparent;
+    }
+
+    .circle {
+        position: relative;
+        top: -100%;
+        transform: translateY(-50%);
+    }
+
+    .circle button {
+        border-radius: 50%;
+        background-color: var(--red);
+        color: var(--white);
+        width: 15vw;
+        height: 15vw;
+    }
+
+    header nav button {
+        border: none;
+        background-color: white;
+        color: var(--darkgrey);
+    }
+
+    header .selected {
+        border-top: var(--red) solid 3px;
+        color: var(--red);
+    }
+
+    header .selected button {
+        color: var(--red);
+    }
+
+    header button {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    header i {
+        font-size: 22px;
+        width: 100%
+    }
+
+    body {
+        background-color: var(--background);
+    }
+
+    .nutrition-info {
+        margin-top: 14vw;
+        padding-bottom: 30vw;
+    }
+
+    main>div {
+        position: relative;
+        display: none;
+        top: 0;
+        z-index: 1;
+    }
+
+    main>div>section {
+        position: relative;
+        top: 14vw;
+        z-index: 1;
+    }
+
+    .nutrient-card,
+    .nutrient-guide {
+        position: relative;
+    }
+
+    article {
+        padding: 3%;
+    }
+
+    /* ----------------- HOME - NUTRIENT CARD ----------------- */
+    .card-guide {
+        display: flex;
+    }
+
+    .card-guide li {
+        border-bottom: solid 2px var(--darkgrey);
+    }
+
+    .card-guide>li button {
+        border: none;
+        background-color: white;
+        color: var(--darkgrey);
+        width: 50vw;
+        height: 12vw;
+        font-size: 16px;
+    }
+
+    .card-guide .selected {
+        border-bottom: solid 5px var(--red);
+    }
+
+    .card-guide .selected>button,
+    .brands h4 {
+        color: var(--red);
+    }
+
+    .home-text,
+    .guide-text,
+    .brands h3,
+    .recipesCards h3 {
+        padding: 2%;
+    }
+
+    .recipesCards,
+    .recipesFilters, 
+    .recipe-example {
+        margin-bottom: 30%;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .home-text>h1 {
+        margin-bottom: 2%;
+    }
+
+    span {
+        color: var(--red);
+        font-weight: bold;
+    }
+
+    table {
+        display: table;
+        border-collapse: separate;
+        background-color: var(--white);
+        border-radius: 2%;
+        margin: 6% 0;
+        width: 100%;
+        padding: 2%;
+    }
+
+    thead {
+        color: var(--red);
+        font-size: 18px;
+        text-align: center;
+    }
+
+    td {
+        padding: 2%;
+    }
+
+    /* ----------------- HOME - NUTRIENT GUIDE ----------------- */
+    .img {
+        width: 60vw;
+        height: 35vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+    }
+
+    .brands p,
+    .nutrient-guide article>p {
+        width: 50vw;
+        padding: 3%;
+        background-color: var(--white);
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+
+    .keyhole,
+    .wholegrain {
+        width: 35vw;
+        height: 25vw;
+    }
+
+    .brand {
+        margin: 4%;
+    }
+
+    .keyhole.img {
+        background-image: url(../images/keyhole.png);
+    }
+
+    .wholegrain.img {
+        background-image: url(../images/wholegrain.png);
+    }
+
+    .juice.img {
+        background-image: url(../images/fruit-juice.jpg);
+    }
+
+    .soft-drinks.img {
+        background-image: url(../images/soft-drinks.jpg);
+    }
+
+    .cacao-milk.img {
+        background-image: url(../images/cacao-drinks.jpg);
+    }
+
+    .rye-crisp.img {
+        background-image: url(../images/rye-crisp-bread.jpg);
+    }
+
+    .whole-wheat.img {
+        background-image: url(../images/wholewheat-bread.jpg);
+    }
+
+    .breakfast.img {
+        background-image: url(../images/breakfast.jpg);
+    }
+
+    .milk.img {
+        background-image: url(../images/milk.jpg);
+    }
+
+    .sour.img {
+        background-image: url(../images/sour-dairy.jpg);
+    }
+
+    .cheese.img {
+        background-image: url(../images/cheese.jpg);
+    }
+
+    .meat.img {
+        background-image: url(../images/meat.jpg);
+    }
+
+    .palaeg.img {
+        background-image: url(../images/palaeg.jpg);
+    }
+
+    .fish.img {
+        background-image: url(../images/fish.jpg);
+    }
+
+    .veg-fruit.img {
+        background-image: url(../images/veg-fruit.jpg);
+    }
+
+    .potatoes.img {
+        background-image: url(../images/potatoes.jpg);
+    }
+
+    .snacks.img {
+        background-image: url(../images/snacks.jpg);
+    }
+
+    .ready.img {
+        background-image: url(../images/ready-meals.jpg);
+    }
+
+    .dressings.img {
+        background-image: url(../images/dressings.jpg);
+    }
+
+    /* ----------------- SHOPPING LIST --------------------- */
+    .shopping-list section article h3 {
+        margin: 0 auto;
+        padding: 3%;
+        color: var(--darkgrey);
+    }
+
+    .ingredient-list {
+        width: 100%;
+        height: 95vw;
+        background-color: var(--white);
+        border-radius: 2%;
+    }
+
+    /* ----------------------- RECIPE FILTERS -------------------- */
+    .checkboxContainer input {
+        display: none;
+    }
+
+    .checkboxContainer {
+        display: inline-block;
+        padding-left: 30px;
+        width: 100%;
+        position: relative;
+        right: 0;
+        cursor: pointer;
+        font-size: 18px;
+        user-select: none;
+        padding: 10px 10px 10px 30px;
+    }
+
+    .checkboxContainer .checkmark {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: var(--background);
+        position: absolute;
+        top: 2;
+        left: 0;
+        border: solid 2px var(--red);
+        border-radius: 50%;
+    }
+
+    .checkboxContainer input:checked+.checkmark:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 9px;
+        border-left: solid 2px var(--red);
+        border-bottom: solid 2px var(--red);
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .filters {
+        width: 30vw;
+        height: 8vw;
+        position: relative;
+        top: 10px;
+        color: var(--white);
+        background-color: var(--red);
+        border-radius: 10%;
+        margin-left: 38%;
+    }
+
+    .btnFilters {
+        width: 35vw;
+        height: 10vw;
+        background-color: var(--red);
+        color: var(--white);
+        position: relative;
+        font-size: 16px;
+        margin-left: 8.5%;
+    }
+
+    #closeFilters {
+        font-size: 35px;
+        color: var(--red);
+    }
+    
+    /* ------------ RECIPE LIST ------------------------- */
+    .pancakes-oats.img {
+        background-image: url(../images/oat-pancakes.jpg);
+    }
+
+    .golden-porridge.img {
+        background-image: url(../images/golden-roasted-porridge.jpg);
+    }
+
+    .rice-pudding.img {
+        background-image: url(../images/overnight-rice.jpg);
+    }
+
+    .beer-porridge.img {
+        background-image: url(../images/beer-porridge.jpg);
+    }
+
+    .lunchbox.img {
+        background-image: url(../images/lunchbox.jpg);
+    }
+
+    .wraps.img {
+        background-image: url(../images/wraps.jpg);
+    }
+
+    .potatoes-cheese.img {
+        background-image: url(../images/potato-cheese.jpg);
+    }
+
+    .carrots-pesto.img {
+        background-image: url(../images/carrots-pesto.jpg);
+    }
+
+    .bulgur.img {
+        background-image: url(../images/bulgur.jpg);
+    }
+
+    .pork-chops.img {
+        background-image: url(../images/pork-chops.jpg);
+    }
+
+    .fish-salad.img {
+        background-image: url(../images/fish-salad.jpg);
+    }
+
+    .sushi.img {
+        background-image: url(../images/sushi.jpg);
+    }
+
+    .veg-packs.img {
+        background-image: url(../images/veg-packs.jpg);
+    }
+
+    .lentil-soup.img {
+        background-image: url(../images/lentilsoup.jpg);
+    }
+
+    .balls.img {
+        background-image: url(../images/balls.jpg);
+    }
+
+    .panes.img {
+        background-image: url(../images/muesli-panes.jpg);
+    }
+
+    .rye-pancakes.img {
+        background-image: url(../images/rye-pancakes.jpg);
+    }
+
+    .rye-chips.img {
+        background-image: url(../images/rye-chips.jpg);
+    }
+
+    .rolls.img {
+        background-image: url(../images/rolls.jpg);
+    }
+
+    .brownies.img {
+        background-image: url(../images/brownies.jpg);
+    }
+
+    .choc-orange.img {
+        background-image: url(../images/choc-orange-cake.jpg);
+    }
+
+    .apricot-lemon.img {
+        background-image: url(../images/apricot-lemon.jpg);
+    }
+
+    .glutenfree.img {
+        background-image: url(../images/glutenfree.jpg);
+    }
+
+    .american-cookies.img {
+        background-image: url(../images/american-style.jpg);
+    }
+
+    .carrot-cake.img {
+        background-image: url(../images/carrot-cake.jpg);
+    }
+
+    .recipeDescription {
+        width: 100%;
+        padding: 3%;
+        background-color: var(--white);
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+
+    #saveRecipe {
+        width: 100%;
+        position: relative;
+    }
+
+    #saveRecipe:active {
+        color: var(--red);
+    }
+
+    /* -------------- EXAMPLARY RECIPE --------------- */
+    .recipe-example {
+        margin-top: 10%;
+    }
+
+    .pancakes-oats.image {
+        background-image: url(../images/oat-pancakes.jpg);
+        width: 100%;
+        height: 180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 2%;
+    }
+
+    .pancake-recipe {
+        padding: 3%;
+        background: var(--white);
+        border-bottom-right-radius: 1%;
+        border-bottom-left-radius: 1%;
+    }
+
+    .fa-arrow-left {
+        position: absolute;
+        top: -3%;
+    }
+
+    #closeExamplaryRecipe {
+        font-size: 30px;
+        color: var(--red);
+    }
+
+    /* ------------------ DIARY ------------------ */
+    .emojis {
+        color: var(--red);
+        font-size: 30px;
+    }
+
+    .fa-smile-beam,
+    .fa-laugh-beam,
+    .fa-grin-tongue-squint,
+    .fa-meh-rolling-eyes,
+    .fa-sad-tear,
+    .fa-angry {
+        padding: 3%;
+    }
+
+    /* ------------------ PROFILE -------------------- */
+    .user-avatar {
+        background-image: url(../images/profilepicture.jpeg);
+        border-radius: 50%;
+        width: 40vw;
+        height: 40vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .button-container {
+        position: relative;
+        top: 10vw;
+    }
+
+    .button-container,
+    .user-avatar {
+        margin: 0 auto;
+    }
+
+    #btnEditProfile, #btnFilters {
+        width: 35vw;
+        height: 10vw;
+        background: var(--red);
+        color: var(--white);
+        border-radius: 5%;
+        margin-top: 6%;
+    }
+
+    .options,
+    .options li {
+        padding: 5%;
+    }
+
+    i+h4 {
+        margin-left: 9vw;
+    }
+
+    /* ------------------ FOOTER ------------------- */
+    footer {
+        position: fixed;
+        top: 0;
+        background-color: var(--red);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        z-index: 11;
+        font-size: 18px;
+        overflow: hidden;
+    }
+
+    footer button {
+        position: relative;
+        top: 5vw;
+        left: 90vw;
+        transform: translateX(-50%);
+        font-size: 28px;
+        color: white;
+        border: none;
+        background-color: transparent;
+    }
+
+    .logo_big {
+        background-image: url(../images/logo_big.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80vw;
+        height: 20vw;
+        margin: 0 auto;
+    }
+
+    footer article {
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        text-align: center;
+        color: var(--white);
+    }
+
+    footer article * {
+        margin-top: 5vw;
+    }
+}
